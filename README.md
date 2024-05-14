@@ -7,7 +7,7 @@ Arka planda çalıştığından görev yönetici harici program bir yerde görü
 izleyici.schedule(DosyaIzleyici(), path=r'M:', recursive=True) dosya yolunu belirtmeniz gereken satır. 
 
 
-    def kaydet(self, window, file_path, dosya_etiket, musteri_adı, dosya_devam):
+     def kaydet(self, window, file_path, dosya_etiket, musteri_adı, dosya_devam):
 
        
         if not musteri_adı.strip() or not dosya_devam.strip():
@@ -43,6 +43,10 @@ izleyici.schedule(DosyaIzleyici(), path=r'M:', recursive=True) dosya yolunu beli
                     sira += 1
 
 Yukarıdaki kod ise istenmeyen dosya isimlerine çıkmasını istediğimiz hata mesajlarıdır. 
+
+    class DosyaIzleyici(FileSystemEventHandler):
+    def __init__(self):
+        self.windows = {}
 
     def dosya_islemi(self, event):
         dosya_adi, dosya_uzantisi = os.path.splitext(event.src_path)
@@ -119,18 +123,20 @@ Yukarıdaki kod ise istenmeyen dosya isimlerine çıkmasını istediğimiz hata 
             info_label5w2 = tk.Label(window, text="ℹ Normal dosya bu müşteri ismine ne gireceğim?", font=("Helvetica", 8), fg="gray", bg='#f0f0f0')
             info_label5w2.pack(pady=(5, 0), padx=10, anchor='w')
 
-            info_label5w2_sub = tk.Label(window, text="    - Müşteri ismine Mitto yazabilirsin.", font=("Helvetica", 8), fg="gray", bg='#f0f0f0')
+            info_label5w2_sub = tk.Label(window, text="    - Müşteri ismine Kadir yazabilirsin.", font=("Helvetica", 8), fg="gray", bg='#f0f0f0')
             info_label5w2_sub.pack(pady=(0, 0), padx=20, anchor='w')
             
-            iletişim_etiket = tk.Label(window, text="© İletişim Tasarım Birimi", font=("Helvetica", 8), fg="#6B6B6B", bg='#f0f0f0', anchor="center")
+            iletişim_etiket = tk.Label(window, text="© Abdulkadir Ünsal", font=("Helvetica", 8), fg="#6B6B6B", bg='#f0f0f0', anchor="center")
             iletişim_etiket.pack(pady=(5, 0), padx=5, side=tk.BOTTOM, fill=tk.X)
 
             window.mainloop()
 
             self.windows[event.src_path] = window
 
+
 Yukarıdaki kısım ise dosya işlemlerinde kullanıcının karşısına çıkan pencere ayarlarıdır. Kendi isteğinize göre revize edebilirsiniz. Burda en altta programı nasıl kullanacağına dair kısa bilgilendirmeler mevcuttur. 
 
-![image](https://github.com/zoaree/Dosya-Y-netim-Sistemi/assets/12134980/4004a748-8975-4f27-a372-de4d2a5dc566)
+![image](https://github.com/zoaree/Dosya-Y-netim-Sistemi/assets/12134980/b2ae6971-b3f8-4cab-8ab3-4780952e1424)
+
 
 
