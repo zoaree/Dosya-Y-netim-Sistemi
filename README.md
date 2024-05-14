@@ -1,4 +1,3 @@
-![image](https://github.com/zoaree/Dosya-Y-netim-Sistemi/assets/12134980/65228c46-f2cf-47e5-b117-3e0bb4f4e4f8)# Dosya-Y-netim-Sistemi
 bu programda amaç server ile çalışan firmalar kullanıcıların hatalı dosya ismi ile kaydetmesini önlemek amaçlanmıştır.
 
 Kullanıcı eğer belirtmiş olduğunuz dosya yoluna bir şey kopyalamak,taşımak veya oluyşturmak isterse bu program otomatik olarak kendini çalıştırmakta ve ismini belirtmiş olduığumuz koşullar doğrultusunda değiştirmesini istemektedir. İnno setup ile setup'ını oluşturabilir ve windowsun startup kısmına dosyanın kısayolunu verebilir ve her pc açıldığında otomatik olarak çalışmasını sağlayabilirsiniz. 
@@ -131,4 +130,7 @@ Yukarıdaki kod ise istenmeyen dosya isimlerine çıkmasını istediğimiz hata 
             self.windows[event.src_path] = window
 
 Yukarıdaki kısım ise dosya işlemlerinde kullanıcının karşısına çıkan pencere ayarlarıdır. Kendi isteğinize göre revize edebilirsiniz. Burda en altta programı nasıl kullanacağına dair kısa bilgilendirmeler mevcuttur. 
+
+![image](https://github.com/zoaree/Dosya-Y-netim-Sistemi/assets/12134980/4004a748-8975-4f27-a372-de4d2a5dc566)
+
 
